@@ -33,55 +33,36 @@
   list-style: none;
 }
 
-.float {
-  animation: flutuante 5s ease-in-out infinite;
-}
-
-@keyframes flutuante {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
-
-.animate-spin-slow  {
-  height: calc(100vh - 63px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-image: url('./assets/bg-bluesky.jpg'); Caminho corrigido */
-  background-color: #030712;
-  animation: rotate-bg 60s linear infinite;
-}
-
-
-
-/* @keyframes rotate-bg {
-  to{
-    background-position: 100%;
-  }
-} */
 
 .globo-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  box-shadow: -25px -25px 25px black inset, 10px 30px 20px white inset,
-    0px 0px 20px var(--cor1);
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  background-image: url("./assets/mapa_mundi_color.jpg"); /* Caminho corrigido */
-  background-size: cover;
-  animation: rotate-globo 60s linear infinite;
-  right: 15%; /* ou o valor que preferir, como 50px */
-  top: 50%; /* Para centralizar verticalmente */
-  transform: translateY(-50%); /* Ajuste para centralizar perfeitamente */
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    /* 1. Sombra padrão para telas maiores (desktop) */
+    box-shadow: -25px -25px 20px black inset, 10px 30px 20px white inset, 0px 0px 20px var(--cor1);
+    background-image: url("./assets/mapa_mund_blue.jpg");
+    background-size: cover;
+    animation: rotate-globo 60s linear infinite;
+    
 }
+
+/* 2. Sombra menor para telas de até 767px (mobile) */
+@media (max-width: 767px) {
+    .globo-img {
+        /* Redefina os valores da sombra para um tamanho menor */
+        box-shadow: -15px -15px 10px black inset, 5px 15px 10px white inset, 0px 0px 10px var(--cor1);
+    }
+}
+
+
+/* Opcional: Animação */
+@keyframes rotate-globo {
+  to {
+    background-position: 100%;
+  }
+}
+
+
 
 @keyframes rotate-globo {
   to {

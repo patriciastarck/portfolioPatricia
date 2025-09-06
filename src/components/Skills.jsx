@@ -63,17 +63,18 @@ const skillsData = [
 ];
 
 const SkillBox = ({ image, title, description }) => (
-  <article className="bg-[#000000] w-52 h-30 p-4 sm:p-6 rounded-lg shadow-lg text-center hover:bg-purple-800 transition-all duration-300">
-    <figure className="flex justify-center mb-4">
-      {" "}
-      {/* Corrigido 'flex-justify-cente' para 'flex justify-center' */}
-      <img src={image} alt={title} className="w-16 h-16 sm:w-20 sm:h-20" />
-    </figure>
-    <header>
-      <h3 className="text-lg sm:text-xl font-semibold mb-2">{title}</h3>
-    </header>
-    <p className="text-gray-400 text-sm sm:text-base">{description}</p>
-  </article>
+  <div className="flex justify-center">
+    <article className="bg-[#000000] w-52 h-30 sm:p-6 hover:bg-purple-800 transition-all duration-300">
+      <figure className="flex justify-center ">
+        {/* Corrigido 'flex-justify-cente' para 'flex justify-center' */}
+        <img src={image} alt={title} className="w-16 h-16 sm:w-20 sm:h-20" />
+      </figure>
+      <header>
+        <h3 className="text-lg sm:text-xl font-semibold mb-2">{title}</h3>
+      </header>
+      <p className="text-gray-400 text-sm sm:text-base">{description}</p>
+    </article>
+  </div>
 );
 
 export default function skills() {

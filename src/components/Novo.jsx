@@ -1,39 +1,38 @@
 import React from "react";
 import globo from "../assets/globo.jpeg";
 import "../index.css";
+
 import Navbar from "./Navbar";
 import gitHub from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 
 export default function Novo() {
   return (
-    <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen flex flex-col items-center">
+    <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen flex flex-col w-full gap-10">
       <Navbar />
 
       <main
         id="home"
-        className="bg-amber-300 flex flex-col md:flex-row items-center justify-between w-full gap-8 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-52"
+        className="flex flex-col justify-around items-center md:flex-row  px-4 md:px-20 lg:px-32 xl:px-52 gap-6"
       >
         {/* ESQUERDA */}
         <section
-          className="mt-16 sm:mt-20 w-full md:w-1/2 flex items-end justify-end"
-          data-aos="fade-down"
+          className="w-3/6 flex justify-center  "
+          // data-aos="fade-down"
           data-aos-delay="800"
         >
-          <div className="bg-red-600 w-full sm:w-3/4 p-4 sm:p-6 md:p-8 flex flex-col gap-8 sm:gap-10 text-center md:text-left">
-            <header className="bg-green-400 h-34 flex flex-col gap-2">
-              <h1 className="font-[jura] font-bold text-3xl sm:text-4xl lg:text-3xl text-amber-50">
+          <div className="sm:p-6 md:p-8 flex flex-col w-full gap-4 sm:gap-6  ">
+            <header className="flex flex-col w-full gap-7">
+              <h1 className="font-[roboto] text-[rgb(240,248,255)] text-lg lg:text-5xl lg:text-left font-bold">
                 Patricia Starck Bernardi
               </h1>
-              <h2 className="text-base sm:text-lg md:text-xl font-[lato] text-white mt-2">
+              <h2 className="text-md font-[jura] text-[#F0F8FF] sm:text-center lg:text-left font-bold">
                 Analista de Sistemas e Full Stack Developer
               </h2>
+              <p className="font-extralight tes text-[#F0F8FF] text-sm  sm:text-center ">
+                Java | Spring Boot | JavaScript | React | Tailwind{" "}
+              </p>
             </header>
-
-            {/* <p className="px-2 sm:px-4 text-sm sm:text-base lg:text-lg font-[lato] text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
-              ipsum dolor sit amet, consectetur adipisicing elit.
-            </p> */}
 
             <div className="flex items-center justify-center md:justify-start space-x-4 mt-4">
               <a
@@ -61,16 +60,11 @@ export default function Novo() {
             </div>
           </div>
         </section>
-
-        <section className="apresentacao ">
-          <div className="globo-img "></div>
-          <div className="apresentacao-texto"></div>
-
-          <div
-            className="absolute z-0 w-40 h-40 sm:w-90 sm:h-15 rounded-full blur-3xl opacity-75
-                bottom-0 right-1.5 transform -translate-x-1/2"
-          ></div>
-        </section>
+        <div className="w-4/12 flex flex-col">
+          <section className="w-full apresentacao flex justify-center">
+            <div className="globo-img "></div>
+          </section>
+        </div>
       </main>
     </div>
   );
