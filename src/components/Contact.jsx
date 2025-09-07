@@ -4,13 +4,15 @@ import finger from "../assets/StockCake-Future At Fingertips_1756229011.jpg";
 export default function Contact() {
   return (
     <section
-      // data-aos="fade-up"
-      data-aos-delay="300"
-      // Classes para centralizar:
+      id="contato"
       className=" min-h-screen overflow-hidden flex justify-center items-center p-6 mt-10 relative"
     >
       <article className="shadow-lg rounded-lg flex flex-col md:flex-row max-w-4x1 w-full relative">
-        <aside className="w-full md:w-1/2 relative flex justify-center">
+        <aside
+          data-aos="fade-right"
+          data-aos-delay="300"
+          className="w-full md:w-1/2 relative flex justify-center"
+        >
           <img
             src={finger}
             alt="Contato"
@@ -18,13 +20,18 @@ export default function Contact() {
           />
         </aside>
         {/*Contact form */}
-        <section className="p-8 md:w-auto">
+        <section
+          data-aos="fade-left"
+          data-aos-delay="300"
+          ection
+          className="p-8 md:w-auto"
+        >
           <header className="mb-6">
             <h2 className="text-4xl font-bold text-center text-white">
               Contato
             </h2>
           </header>
-          <form className="space-y-4">
+          <form ection className="space-y-4">
             <div>
               <label
                 htmlFor="name"

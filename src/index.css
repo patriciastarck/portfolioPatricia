@@ -1,18 +1,3 @@
-/* @import "tailwindcss";
-
-.float {
-   animation: flutuante 5s ease-in-out infinite;
-}
-
-@keyframes flutuante {
-    0%, 100%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(10px)
-    }
-    
-} */
 
 @import "tailwindcss";
 
@@ -33,10 +18,13 @@
   list-style: none;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 .globo-img {
-    width: 25vw;
-    height: 25vw;
+    width: 28vw;
+    height: 28vw;
     border-radius: 50%;
     /* 1. Sombra padrão para telas maiores (desktop) */
     box-shadow: -25px -25px 20px black inset, 10px 30px 20px white inset, 0px 0px 20px var(--cor1);
@@ -54,7 +42,6 @@
     }
 }
 
-
 /* Opcional: Animação */
 @keyframes rotate-globo {
   to {
@@ -64,29 +51,6 @@
 
 
 
-@keyframes rotate-globo {
-  to {
-    background-position: 100%;
-  }
-}
 
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.animate-spin-slow {
-  animation: spin-slow 30s linear infinite;
-}
 
-@keyframes rotate-y {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
-}
-.animate-rotate-y-slow {
-  animation: rotate-y 20s linear infinite;
-}

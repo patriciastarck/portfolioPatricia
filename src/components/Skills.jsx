@@ -7,8 +7,6 @@ import Tailwind_logo from "../assets/tailwind.png";
 import SpringBoot_logo from "../assets/icons8-spring-boot-144.png";
 import JavaScript_logo from "../assets/icons8-javascript-144.png";
 import Postgres_logo from "../assets/icons8-postgres-144.png";
-import Fiber from "../assets/StockCake-Radiant Fiber Optics_1756251993.jpg";
-import vibrant from "../assets/StockCake-Vibrant Light Streaks_1756406109.jpg";
 import dig from "../assets/StockCake-Digital Consciousness Evolution_1756406659.jpg";
 
 const skillsData = [
@@ -45,13 +43,13 @@ const skillsData = [
   {
     id: 6,
     image: Html,
-    title: "HTML",
+    // title: "HTML",
     // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
   {
     id: 7,
     image: Css,
-    title: "CSS",
+    // title: "CSS",
     // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
   {
@@ -80,7 +78,7 @@ const SkillBox = ({ image, title, description }) => (
 export default function skills() {
   return (
     <section
-      id="skills"
+      id="habilidades"
       className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-white px-4 py-10"
     >
       {
@@ -95,11 +93,10 @@ export default function skills() {
         data-aos-delay="800"
         className="relative z-20 text-center space-y-6 sm:space-y-10"
       >
-        <header className="min-h-28">
-          <div className="flex items-center justify-center gap-4 sm:gap-8">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center">
-              Minhas Experiêncieas <br />e{" "}
-              <span className="text-purple-400">Habilidades</span>
+        <header className="min-h-26 flex justify-center">
+          <div className="flex items-start justify-center gap-4 sm:gap-8">
+            <h1 className="font-[jura] text-3xl sm:text-4xl font-bold text-center">
+              Minhas Habilidades
             </h1>
           </div>
         </header>

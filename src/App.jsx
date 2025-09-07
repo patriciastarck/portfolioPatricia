@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 // Importe os estilos aqui
@@ -26,7 +26,7 @@ function App() {
       <About />
       <Skills />
       <ProjectCarousel />
-      <Projects />
+
       <Contact />
       <Footer />
     </main>

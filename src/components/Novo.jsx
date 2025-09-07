@@ -8,33 +8,36 @@ import linkedin from "../assets/linkedin.png";
 
 export default function Novo() {
   return (
-    <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen flex flex-col w-full gap-10">
+    <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen h-screen flex flex-col w-full ">
       <Navbar />
-
       <main
         id="home"
-        className="flex flex-col justify-around items-center md:flex-row  px-4 md:px-20 lg:px-32 xl:px-52 gap-6"
+        className="flex flex-col items-center justify-evenly md:flex-row w-full px-4 md:px-20 lg:px-32 xl:px-52 flex-grow"
       >
         {/* ESQUERDA */}
         <section
-          className="w-3/6 flex justify-center  "
-          // data-aos="fade-down"
-          data-aos-delay="800"
+          className="sm:w-3/4 md:w-2/4 flex flex-col justify-center items-center sm:h-70 "
+          data-aos="fade-down"
+          data-aos-delay="1000"
         >
-          <div className="sm:p-6 md:p-8 flex flex-col w-full gap-4 sm:gap-6  ">
-            <header className="flex flex-col w-full gap-7">
-              <h1 className="font-[roboto] text-[rgb(240,248,255)] text-lg lg:text-5xl lg:text-left font-bold">
+          <div className=" h-11/12 sm:p-6 md:p-8 flex flex-col w-full gap-4 sm:gap-6">
+            <header className=" flex flex-col w-full gap-5">
+              <h1 className="sm text-center font-[jura] text-[rgb(240,248,255)] text-3xl lg:text-5xl lg:text-left font-bold ">
                 Patricia Starck Bernardi
               </h1>
-              <h2 className="text-md font-[jura] text-[#F0F8FF] sm:text-center lg:text-left font-bold">
+              <h2 className="text-md font-[jura] text-[#F0F8FF] sm:text-center md:text-left font-bold">
                 Analista de Sistemas e Full Stack Developer
               </h2>
-              <p className="font-extralight tes text-[#F0F8FF] text-sm  sm:text-center ">
+              <p className=" text-[#F0F8FF] font-[jura] font-semibold text-center md:text-left">
                 Java | Spring Boot | JavaScript | React | Tailwind{" "}
               </p>
             </header>
 
-            <div className="flex items-center justify-center md:justify-start space-x-4 mt-4">
+            <div
+              data-aos="zoom-in-down"
+              data-aos-delay="1000"
+              className="h-20 flex items-end justify-center md:justify-start space-x-4 mt-4"
+            >
               <a
                 href="https://github.com/patriciastarck"
                 target="_blank"
@@ -60,7 +63,11 @@ export default function Novo() {
             </div>
           </div>
         </section>
-        <div className="w-4/12 flex flex-col">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="1000"
+          className="w-4/12 flex flex-col"
+        >
           <section className="w-full apresentacao flex justify-center">
             <div className="globo-img "></div>
           </section>
