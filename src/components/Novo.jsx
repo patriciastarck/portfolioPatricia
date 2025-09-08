@@ -16,19 +16,19 @@ export default function Novo() {
       >
         {/* ESQUERDA */}
         <section
-          className="sm:w-3/4 md:w-2/4 flex flex-col justify-center items-center sm:h-70 "
-          data-aos="fade-down"
-          data-aos-delay="1000"
+          className="sm:w-3/4 md:w-2/4 flex flex-col justify-center items-center sm:h-60 "
+          // data-aos="fade-down"
+          // data-aos-delay="1000"
         >
           <div className=" h-11/12 sm:p-6 md:p-8 flex flex-col w-full gap-4 sm:gap-6">
-            <header className=" flex flex-col w-full gap-5">
+            <header className=" flex flex-col w-full gap-3">
               <h1 className="sm text-center font-[jura] text-[rgb(240,248,255)] text-3xl lg:text-5xl lg:text-left font-bold ">
                 Patricia Starck Bernardi
               </h1>
               <h2 className="text-md font-[jura] text-[#F0F8FF] sm:text-center md:text-left font-bold">
                 Analista de Sistemas e Full Stack Developer
               </h2>
-              <p className=" text-[#F0F8FF] font-[jura] font-semibold text-center md:text-left">
+              <p className="text-[#F0F8FF] font-[jura] font-semibold text-center md:text-left">
                 Java | Spring Boot | JavaScript | React | Tailwind{" "}
               </p>
             </header>
@@ -36,19 +36,8 @@ export default function Novo() {
             <div
               data-aos="zoom-in-down"
               data-aos-delay="1000"
-              className="h-20 flex items-end justify-center md:justify-start space-x-4 mt-4"
+              className=" h-10 flex items-end justify-center md:justify-start space-x-4 mt-4"
             >
-              <a
-                href="https://github.com/patriciastarck"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={gitHub}
-                  alt="github"
-                  className="w-9 h-9 sm:w-11 sm:h-11 hover:scale-110 transition-transform"
-                />
-              </a>
               <a
                 href="https://www.linkedin.com/in/patricia-starck-bernardi/"
                 target="_blank"
@@ -57,6 +46,17 @@ export default function Novo() {
                 <img
                   src={linkedin}
                   alt="linkedin"
+                  className="w-9 h-9 sm:w-11 sm:h-11 hover:scale-110 transition-transform"
+                />
+              </a>
+              <a
+                href="https://github.com/patriciastarck"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={gitHub}
+                  alt="github"
                   className="w-9 h-9 sm:w-11 sm:h-11 hover:scale-110 transition-transform"
                 />
               </a>

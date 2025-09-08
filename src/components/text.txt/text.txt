@@ -78,6 +78,33 @@ export default function Novo() {
 }
 
 
+.globo-img {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    box-shadow: -25px -25px black inset, 10px 30px 20px white inset, 0px 0px 20px var(--cor1);
+    background-image: url("./assets/mapa_mund_blue.jpg"); /* Caminho corrigido */
+    background-size: cover;
+    /* Remover o display: flex; daqui e colocá-lo na section */
+    /* Remover justify-content e align-items daqui */
+    animation: rotate-globo 60s linear infinite;
+}
 
-
+.globo-img {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  box-shadow: -25px -25px 25px black inset, 10px 30px 20px white inset,
+    0px 0px 20px var(--cor1);
+  display: flex;
+  /* position: absolute; */
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/mapa_mundi_color.jpg"); /* Caminho corrigido */
+  background-size: cover;
+  animation: rotate-globo 60s linear infinite;
+  /*right: 15%; /* ou o valor que preferir, como 50px */
+  /*top: 50%; /* Para centralizar verticalmente */
+  transform: translateY(-50%); /* Ajuste para centralizar perfeitamente */
+}
 

@@ -93,7 +93,7 @@ export default function skills() {
         data-aos-delay="800"
         className="relative z-20 text-center space-y-6 sm:space-y-10"
       >
-        <header className="min-h-26 flex justify-center">
+        <header className="min-h-26 flex justify-center items-center">
           <div className="flex items-start justify-center gap-4 sm:gap-8">
             <h1 className="font-[jura] text-3xl sm:text-4xl font-bold text-center">
               Minhas Habilidades

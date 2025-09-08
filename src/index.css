@@ -25,6 +25,11 @@ body {
 .globo-img {
     width: 28vw;
     height: 28vw;
+    
+    /* Adicionando e ajustando as propriedades de tamanho mínimo */
+    min-width: 180px; 
+    min-height: 180px;
+
     border-radius: 50%;
     /* 1. Sombra padrão para telas maiores (desktop) */
     box-shadow: -25px -25px 20px black inset, 10px 30px 20px white inset, 0px 0px 20px var(--cor1);
@@ -41,6 +46,8 @@ body {
         box-shadow: -15px -15px 10px black inset, 5px 15px 10px white inset, 0px 0px 10px var(--cor1);
     }
 }
+
+
 
 /* Opcional: Animação */
 @keyframes rotate-globo {

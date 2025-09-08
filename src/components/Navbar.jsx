@@ -40,7 +40,7 @@ export default function Navbar() {
         // data-aos="fade-up"
         data-aos-delay="300"
       >
-        <h1 className=" text-4xl font-[jura] font-bold italic text-white mr-3.5vvg">
+        <h1 className="text-4xl font-[jura] font-bold italic text-white mr-3.5vvg">
           Portfolio
         </h1>
         <div className="container mx-auto flex items-center justify-end">
@@ -75,7 +75,7 @@ export default function Navbar() {
           } md:hidden bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-2.5 space-y-8 pt-16`}
         >
           <button
-            className="absolute top-5 right-5"
+            className="absolute top-5 right-5 text-white"
             onClick={() => setIsOpen(false)}
           >
             <FiX className="w-8 h-8" />

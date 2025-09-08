@@ -45,7 +45,7 @@ export default function About() {
               Sobre mim
             </h1>
           </header>
-          <p className="text-base sm:text-sm md:text-md text-gray-300 mb-6s sm:mb-8 leading-relaxed text-justify">
+          <p className="h-60 text-base sm:text-sm md:text-md text-gray-300 mb-6s sm:mb-8 leading-relaxed text-justify">
             Analista de sistemas e desenvolvedora full stack com olhar
             direcionado para a inovação. Minha experiência na área de nutrição
             me ensinou a importância da análise detalhada, da resolução de
