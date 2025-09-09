@@ -91,12 +91,12 @@ export default function skills() {
       <div
         data-aos="fade-up"
         data-aos-delay="800"
-        className="relative z-20 text-center space-y-6 sm:space-y-10"
+        className="h-screen relative z-20 text-center space-y-6 sm:space-y-10 flex flex-col items-center justify-items-center"
       >
-        <header className="min-h-26 flex justify-center items-center">
+        <header className=" min-h-22 flex justify-start items-center">
           <div className="flex items-start justify-center gap-4 sm:gap-8">
             <h1 className="font-[jura] text-3xl sm:text-4xl font-bold text-center">
-              Minhas Habilidades
+              Minhas<span className="text-[#990dc7]">Habilidades</span>
             </h1>
           </div>
         </header>

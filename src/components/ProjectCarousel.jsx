@@ -39,7 +39,6 @@ const ProjectCarousel = () => {
       id: 1,
       img: secretNum,
       title: "Jogo do Numero Secreto - JavaScript",
-      url: "https://github.com/patriciastarck/forumHub.git",
     },
     { id: 2, img: literal, title: "Buscador de Livros - Java 17 Spring Boot" },
     { id: 3, img: conversorMoedas, title: "Conversor de Moedas - Java 21" },
@@ -47,7 +46,6 @@ const ProjectCarousel = () => {
       id: 4,
       img: javaImg,
       title: "Fórum Hub - Java 17 Spring Boot",
-      url: "https://github.com/patriciastarck/forumHub.git",
     },
     { id: 5, img: javaImg2, title: "Projeto 3" },
   ];

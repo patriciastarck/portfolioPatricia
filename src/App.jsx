@@ -6,13 +6,15 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 // Importe os estilos aqui
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Novo from "./components/Novo";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ProjectCarousel from "./components/ProjectCarousel";
+
+import Projects from "./components/Projects";
 
 function App() {
   useEffect(() => {
@@ -25,8 +27,7 @@ function App() {
       <Novo />
       <About />
       <Skills />
-      <ProjectCarousel />
-
+      <Projects />
       <Contact />
       <Footer />
     </main>
