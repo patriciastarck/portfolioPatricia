@@ -1,9 +1,11 @@
 import React from "react";
 import purpleAstro from "../assets/robotBook.png";
 import game from "../assets/secretNumber.png";
-import conversor from "../assets/conversorDeMoedasJava.png";
-import literalura from "../assets/literalutaImagem.jpg";
+import conversor from "../assets/conversor_img.png";
+import literalura from "../assets/literalura_img.png";
 import code from "../assets/StockCake-Coding in Progress_1756407354.jpg";
+import teste from "../assets/teste.png";
+import forum from "../assets/forumHub_img.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
@@ -23,7 +25,7 @@ const ProjectCard = ({ image, title, description, link }) => {
             rel="noopener noreferrer"
             className="absolute h-[202px] inset-0 flex items-center justify-center bg-opacity-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
-            <button className="bg-blue-800 font-medium text-white py-2 px-4 rounded-3xl shadow hover:text-shadow-white hover:bg-[#2879d5] group-hover:opacity-90">
+            <button className="bg-blue-800 text-sm font-bold text-white py-2 px-4 rounded-3xl shadow hover:text-shadow-white hover:bg-[#2879d5] group-hover:opacity-90">
               Live Preview
             </button>
           </a>
@@ -59,26 +61,25 @@ export default function Projects() {
       image: conversor,
       title: "Conversor de moeda - Java",
       description: "Lorem ipsum dolor uhu ihijiioj",
-      link: "",
+      link: "https://github.com/patriciastarck/conversor-de-moedas",
     },
     {
-      image: purpleAstro,
-      title: "Portfolio Website4",
+      image: forum,
+      title: "Forum Hub - Java Spring Boot",
       description: "Lorem ipsum dolor uhu ihijiioj",
-      link: "",
+      link: "https://github.com/patriciastarck/forumHub",
     },
-    {
-      image: purpleAstro,
-      title: "Portfolio Website3",
-      description: "Lorem ipsum dolor uhu ihijiioj",
-      link: "",
-    },
-    {
-      image: purpleAstro,
-      title: "Portfolio Website4",
-      description: "Lorem ipsum dolor uhu ihijiioj",
-      link: "",
-    },
+    // {
+    //   image: conversor,
+    //   title: "Portfolio Website3",
+    //   description: "Lorem ipsum dolor uhu ihijiioj",
+    // },
+    // {
+    //   image: teste,
+    //   title: "Portfolio Website4",
+    //   description: "Lorem ipsum dolor uhu ihijiioj",
+    //   link: "",
+    // },
   ];
 
   return (
