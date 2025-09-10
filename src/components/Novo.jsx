@@ -10,6 +10,7 @@ export default function Novo() {
   return (
     <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen h-screen flex flex-col w-full ">
       <Navbar />
+
       <main
         id="home"
         className="flex flex-col items-center justify-evenly md:flex-row w-full px-4 md:px-20 lg:px-32 xl:px-52 flex-grow"

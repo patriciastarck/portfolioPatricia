@@ -25,6 +25,7 @@ function App() {
   return (
     <main className="bg-gray-950">
       <Novo />
+
       <About />
       <Skills />
       <Projects />

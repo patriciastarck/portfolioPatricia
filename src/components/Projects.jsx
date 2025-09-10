@@ -10,7 +10,7 @@ import forum from "../assets/forumHub_img.png";
 const ProjectCard = ({ image, title, description, link }) => {
   return (
     // Substitua 'max-w-sm' por uma largura fixa como 'w-72'
-    <article className="relative w-62 shadow-sm shadow-[rgba(9,9,121,1)] bg-gray-800 rounded overflow-hidden group flex flex-col">
+    <article className="relative w-62 shadow-sm shadow-[rgba(9,9,121,1)] bg-gray-800 rounded overflow-hidden group flex flex-col text-center">
       <div className="absolute z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#0b2caf] rounded-full blur-3xl opacity-50 -top-5 left-10"></div>
       <div className="relative z-10 flex flex-col flex-1">
         <figure className="relative h-46">
@@ -47,8 +47,8 @@ export default function Projects() {
   const listProjects = [
     {
       image: game,
-      title: "Jogo do número secreto",
-      description: "JavaScript",
+      title: "Jogo do número secreto - JavaScript",
+      description: "Redireciona ao Github do projeto",
       link: "https://jogo-henna-rho-92.vercel.app/",
     },
     {
@@ -60,24 +60,24 @@ export default function Projects() {
     {
       image: conversor,
       title: "Conversor de moeda - Java",
-      description: "Lorem ipsum dolor uhu ihijiioj",
+      description: "Redireciona ao Github do projeto",
       link: "https://github.com/patriciastarck/conversor-de-moedas",
     },
     {
       image: forum,
       title: "Forum Hub - Java Spring Boot",
-      description: "Lorem ipsum dolor uhu ihijiioj",
+      description: "Redireciona ao Github do projeto",
       link: "https://github.com/patriciastarck/forumHub",
     },
-    // {
-    //   image: conversor,
-    //   title: "Portfolio Website3",
-    //   description: "Lorem ipsum dolor uhu ihijiioj",
-    // },
+    {
+      image: conversor,
+      title: "Portfolio Website3",
+      description: "Redireciona ao Github do projeto",
+    },
     // {
     //   image: teste,
     //   title: "Portfolio Website4",
-    //   description: "Lorem ipsum dolor uhu ihijiioj",
+    //   description: "Redireciona ao Github do projeto",
     //   link: "",
     // },
   ];
