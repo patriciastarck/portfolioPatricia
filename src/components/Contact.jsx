@@ -31,7 +31,12 @@ export default function Contact() {
               Contato
             </h2>
           </header>
-          <form ection className="space-y-4">
+
+          <form
+            action="https://formspree.io/f/mdklbpnb"
+            method="POST"
+            className="space-y-4"
+          >
             <div>
               <label
                 htmlFor="name"
@@ -47,6 +52,7 @@ export default function Contact() {
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               />
             </div>
+            <input type="text" name="_gotcha" style={{ display: "none" }} />
             <div>
               <label
                 htmlFor="email"
@@ -77,6 +83,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <button
+              type="submit"
               className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c]
                           hover:shadow-[0_0_40px_rgba(182,0,128,0.7)] rounded-full text-lg"
             >
