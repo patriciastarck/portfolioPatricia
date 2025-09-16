@@ -29,7 +29,7 @@ export default function Navbar() {
     { id: 1, name: "Home", link: "#home" },
     { id: 2, name: "Sobre", link: "#sobre" },
     { id: 3, name: "Habilidades", link: "#habilidades" },
-    { id: 4, name: "Meus Projetos", link: "#meus-projetos" },
+    { id: 4, name: "Meus Projetos", link: "#projects" },
     { id: 5, name: "Contato", link: "#contato" },
   ];
 

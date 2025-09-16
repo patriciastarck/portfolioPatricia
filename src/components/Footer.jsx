@@ -1,11 +1,10 @@
 import VLibras from "@djpfs/react-vlibras";
-import { footer } from "framer-motion/client";
-import React from "react";
 
 export default function Footer() {
   return (
     <footer class="bg-[#181717] text-white p-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
       <div class="font-[jura] font-black text-lg">
+        <h1 className="font-[jura]">Portfolio</h1>
         <VLibras />
       </div>
 

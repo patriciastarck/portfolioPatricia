@@ -62,7 +62,7 @@ const skillsData = [
 
 const SkillBox = ({ image, title, description }) => (
   <div className="flex justify-center">
-    <article className="bg-[#000000] w-52 h-30 sm:p-6 hover:bg-purple-800 transition-all duration-300">
+    <article className="bg-[#000000] w-52 h-30 sm:p-6 hover:bg-[#990dc7] transition-all duration-300">
       <figure className="flex justify-center ">
         {/* Corrigido 'flex-justify-cente' para 'flex justify-center' */}
         <img src={image} alt={title} className="w-16 h-16 sm:w-20 sm:h-20" />
@@ -91,9 +91,9 @@ export default function skills() {
       <div
         data-aos="fade-up"
         data-aos-delay="800"
-        className="h-screen relative z-20 text-center space-y-6 sm:space-y-10 flex flex-col items-center justify-items-center"
+        className="relative z-20 text-center space-y-6 sm:space-y-10 flex flex-col items-center justify-items-center"
       >
-        <header className=" min-h-22 flex justify-start items-center">
+        <header className="min-h-22 flex justify-start items-center">
           <div className="flex items-start justify-center gap-4 sm:gap-8">
             <h1 className="font-[jura] text-3xl sm:text-4xl font-bold text-center">
               Minhas<span className="text-[#990dc7]">Habilidades</span>

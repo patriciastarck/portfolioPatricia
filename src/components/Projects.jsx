@@ -1,16 +1,17 @@
 import React from "react";
-import purpleAstro from "../assets/robotBook.png";
 import game from "../assets/secretNumber.png";
 import conversor from "../assets/conversor_img.png";
 import literalura from "../assets/literalura_img.png";
-import code from "../assets/StockCake-Coding in Progress_1756407354.jpg";
-import teste from "../assets/teste.png";
 import forum from "../assets/forumHub_img.png";
+import lp from "../assets/lp_saude_mental.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
     // Substitua 'max-w-sm' por uma largura fixa como 'w-72'
-    <article className="relative w-62 shadow-sm shadow-[rgba(9,9,121,1)] bg-gray-800 rounded overflow-hidden group flex flex-col text-center">
+    <article
+      id="projects"
+      className="relative w-62 shadow-sm shadow-[rgba(9,9,121,1)] bg-gray-800 rounded overflow-hidden group flex flex-col text-center"
+    >
       <div className="absolute z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#0b2caf] rounded-full blur-3xl opacity-50 -top-5 left-10"></div>
       <div className="relative z-10 flex flex-col flex-1">
         <figure className="relative h-46">
@@ -70,9 +71,10 @@ export default function Projects() {
       link: "https://github.com/patriciastarck/forumHub",
     },
     {
-      image: conversor,
-      title: "Portfolio Website3",
-      description: "Redireciona ao Github do projeto",
+      image: lp,
+      title: "Landing Page",
+      description: "Evento de saúde mental",
+      link: "http://127.0.0.1:5501/lp.html",
     },
     // {
     //   image: teste,

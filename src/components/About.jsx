@@ -1,8 +1,4 @@
-// import React from 'react'
-import React from "react";
-
 import cyber from "../assets/StockCake-Cybersecurity Data Analysis_1755795948.jpg";
-import work from "../assets/StockCake-Coding Workstation Ambiance_1757003024.jpg";
 
 export default function About() {
   return (
@@ -35,11 +31,6 @@ export default function About() {
           data-aos-delay="500"
           className="sm:text lg:w-8/10 text-center lg:text-left relative"
         >
-          {/* <div
-            className="absolute z-0 w-40 h-40 sm:w-90 sm:h-20 bg-[#990dc7] rounded-full blur-3xl opacity-60
-                -top-5 left-1"
-          ></div> */}
-
           <header className="font-[jura]">
             <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
               Sobre mim
@@ -54,12 +45,14 @@ export default function About() {
             que cada projeto seja elaborado com precisão e propósito.
           </p>
           <footer>
-            {/* <button
+            <a href="../assets/curriculoAtualizadoPort.pdf">curriculo</a>
+
+            <button
               className="inline-flex text-white border-2 py-2 px-4 sm:px-6 focus:outline-none w-30
-                    hover:bg-[#6F00FF] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
+                    hover:bg-[#990dc7] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
             >
-              Saiba mais
-            </button> */}
+              currículo
+            </button>
           </footer>
         </article>
       </div>

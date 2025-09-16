@@ -12,7 +12,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Novo from "./components/Novo";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ProjectCarousel from "./components/ProjectCarousel";
 
 import Projects from "./components/Projects";
 
@@ -25,7 +24,6 @@ function App() {
   return (
     <main className="bg-gray-950">
       <Novo />
-
       <About />
       <Skills />
       <Projects />
