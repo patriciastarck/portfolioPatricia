@@ -72,9 +72,9 @@ export default function Projects() {
     },
     {
       image: lp,
-      title: "Landing Page",
-      description: "Evento de saúde mental",
-      link: "http://127.0.0.1:5501/lp.html",
+      title: "Portfolio Website3",
+      description: "Redireciona ao Github do projeto",
+      link: "file:///D:/lp-saude/lp.html",
     },
     // {
     //   image: teste,

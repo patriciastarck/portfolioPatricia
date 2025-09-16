@@ -45,14 +45,20 @@ export default function About() {
             que cada projeto seja elaborado com precisão e propósito.
           </p>
           <footer>
-            <a href="../assets/curriculoAtualizadoPort.pdf">curriculo</a>
+            <a
+              className="inline-flex text-white border-2 py-2 px-4 sm:px-6 focus:outline-none w-40 justify-center
+                    hover:bg-[#990dc7] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
+              href="/public/curriculoAtualizado.pdf"
+            >
+              Curriculo Download
+            </a>
 
-            <button
+            {/* <button
               className="inline-flex text-white border-2 py-2 px-4 sm:px-6 focus:outline-none w-30
                     hover:bg-[#990dc7] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
             >
               currículo
-            </button>
+            </button> */}
           </footer>
         </article>
       </div>
