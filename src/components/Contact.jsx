@@ -84,13 +84,13 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#990dc7]
+              className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c]
                       rounded-full text-lg"
             >
               Enviar Mensagem
             </button>
             <div
-              className=" sm:w-120 sm:h-20 bg-[#990dc7] rounded-full blur-3xl opacity-50
+              className=" sm:w-120 sm:h-20 bg-[#cd3cf5] rounded-full blur-3xl opacity-50
                           bottom-0 left-1/2 transform -translate-x-1/2"
             ></div>
           </form>

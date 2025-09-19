@@ -95,8 +95,9 @@ export default function skills() {
       >
         <header className="min-h-22 flex justify-start items-center">
           <div className="flex items-start justify-center gap-4 sm:gap-8">
-            <h1 className="font-[jura] text-3xl sm:text-4xl font-bold text-center">
-              Minhas<span className="text-[#990dc7]">Habilidades</span>
+            <h1 className="font-[jura] text-3xl sm:text-4xl font-extrabold text-center bg-black/70 tracking-wider">
+              Minhas{" "}
+              <span className="text-[#990dc7] font-extrabold">Habilidades</span>
             </h1>
           </div>
         </header>
