@@ -90,7 +90,7 @@ export default function skills() {
       }
       <div
         data-aos="fade-up"
-        data-aos-delay="800"
+        data-aos-delay="300"
         className="relative z-20 text-center space-y-6 sm:space-y-10 flex flex-col items-center justify-items-center"
       >
         <header className="min-h-22 flex justify-start items-center">
