@@ -1,6 +1,9 @@
 import cyber from "../assets/StockCake-Cybersecurity Data Analysis_1755795948.jpg";
+import { useLanguage } from "../context/LanguageContext"; // Importe o hook
 
 export default function About() {
+  const { t } = useLanguage(); // Obtenha a função de tradução
+
   return (
     <section
       id="sobre"
@@ -33,16 +36,11 @@ export default function About() {
         >
           <header className="font-[jura]">
             <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-              Sobre mim
+              {t("ABOUT_TITLE")}
             </h1>
           </header>
           <p className="h-60 text-base sm:text-sm md:text-md text-gray-300 mb-6s sm:mb-8 leading-relaxed text-justify">
-            Analista de sistemas e desenvolvedora full stack com olhar
-            direcionado para a inovação. Minha experiência na área de nutrição
-            me ensinou a importância da análise detalhada, da resolução de
-            problemas e da criação de soluções personalizadas. Hoje, aplico
-            essas habilidades para desenvolver sistemas eficientes, assegurando
-            que cada projeto seja elaborado com precisão e propósito.
+            {t("ABOUT_TEXT")}
           </p>
           <footer>
             <a
@@ -50,7 +48,7 @@ export default function About() {
                     hover:bg-[#990dc7] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
               href="/public/curriculoAtualizado.pdf"
             >
-              Curriculo Download
+              {t("ABOUT_DOWNLOAD_CV")}
             </a>
 
             {/* <button

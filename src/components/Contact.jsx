@@ -1,7 +1,10 @@
 import React from "react";
 import finger from "../assets/StockCake-Future At Fingertips_1756229011.jpg";
+import { useLanguage } from "../context/LanguageContext"; // Importe o hook
 
 export default function Contact() {
+  const { t } = useLanguage(); // Obtenha a função de tradução
+
   return (
     <section
       id="contato"
@@ -28,7 +31,7 @@ export default function Contact() {
         >
           <header className="mb-6">
             <h2 className="text-4xl font-bold text-center text-white">
-              Contato
+              {t("CONTACT_TITLE")}
             </h2>
           </header>
 
@@ -42,13 +45,13 @@ export default function Contact() {
                 htmlFor="name"
                 className="block text-gray-300 font-medium mb-2"
               >
-                Nome
+                {t("CONTACT_NAME")}
               </label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Seu nome"
+                placeholder={t("CONTACT_NAME")}
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               />
             </div>
@@ -58,13 +61,13 @@ export default function Contact() {
                 htmlFor="email"
                 className="block text-gray-300 font-medium mb-2"
               >
-                Email
+                {t("CONTACT_EMAIL")}
               </label>
               <input
                 type="email"
                 name="email"
                 id="name"
-                placeholder="Seu email"
+                placeholder={t("CONTACT_EMAIL")}
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               />
             </div>
@@ -73,12 +76,12 @@ export default function Contact() {
                 html-for="Message"
                 className="block text-gray-300 font-medium mb-2"
               >
-                Mensagem
+                {t("CONTACT_MESSAGE")}
               </label>
               <textarea
                 name="message"
                 id="message"
-                placeholder="Sua mensagem"
+                placeholder={t("CONTACT_MESSAGE")}
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               ></textarea>
             </div>
@@ -87,7 +90,7 @@ export default function Contact() {
               className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c]
                       rounded-full text-lg"
             >
-              Enviar Mensagem
+              {t("CONTACT_SEND")}
             </button>
             <div
               className=" sm:w-120 sm:h-20 bg-[#cd3cf5] rounded-full blur-3xl opacity-50

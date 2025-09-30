@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar() {
+  // Chamada de Hooks dentro do componente funcional: CORRETO
   const [isOpen, setIsOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,25 +28,38 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Use a função 't' para traduzir os nomes dos links
   const NavbarLinks = [
-    { id: 1, name: "Home", link: "#home" },
-    { id: 2, name: "Sobre", link: "#sobre" },
-    { id: 3, name: "Habilidades", link: "#habilidades" },
-    { id: 4, name: "Meus Projetos", link: "#projects" },
-    { id: 5, name: "Contato", link: "#contato" },
+    { id: 1, name: t("NAV_HOME"), link: "#home" },
+    { id: 2, name: t("NAV_ABOUT"), link: "#sobre" },
+    { id: 3, name: t("NAV_SKILLS"), link: "#habilidades" },
+    { id: 4, name: t("NAV_PROJECTS"), link: "#projects" },
+    { id: 5, name: t("NAV_CONTACT"), link: "#contato" },
   ];
 
   return (
     <div className="w-screen flex items-center justify-center">
       <header
         className="z-20 flex h-20 w-11/12 items-center justify-center "
-        // data-aos="fade-up"
         data-aos-delay="300"
       >
         <h1 className="text-4xl font-[jura] font-bold italic text-white mr-3.5vvg">
-          Portfolio
+          {t("TITLE_PORTFOLIO")}
         </h1>
         <div className="container mx-auto flex items-center justify-end">
+          {/* O BOTÃO DE LINGUAGEM */}
+          <button
+            onClick={toggleLanguage}
+            className="text-white text-sm font-bold border border-white px-2 py-1 rounded-md mr-4 hover:bg-white hover:text-gray-900 transition-colors duration-300"
+            aria-label={`Mudar para ${
+              language === "pt" ? "Inglês" : "Português"
+            }`}
+          >
+            {/* Exibe a abreviação do idioma oposto */}
+            {language === "pt" ? "EN" : "PT"}
+          </button>
+          {/* FIM DO BOTÃO */}
+
           <button
             className="md:hidden focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}

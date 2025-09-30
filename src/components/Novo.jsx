@@ -1,12 +1,14 @@
 import React from "react";
 import globo from "../assets/globo.jpeg";
 import "../index.css";
-
 import Navbar from "./Navbar";
 import gitHub from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
+import { useLanguage } from "../context/LanguageContext"; // Importe o hook
 
 export default function Novo() {
+  const { t } = useLanguage(); // Obtenha a função de tradução
+
   return (
     <div className="bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] min-h-screen h-screen flex flex-col w-full ">
       <Navbar />
@@ -24,13 +26,13 @@ export default function Novo() {
           <div className=" h-11/12 sm:p-6 md:p-8 flex flex-col w-full gap-4 sm:gap-6">
             <header className=" flex flex-col w-full gap-3">
               <h1 className="sm text-center font-[jura] text-[rgb(240,248,255)] text-3xl lg:text-5xl lg:text-left font-bold ">
-                Patricia Starck Bernardi
+                {t("NAME")}
               </h1>
               <h2 className="text-md font-[jura] text-[#F0F8FF] sm:text-center md:text-left font-bold">
-                Analista de Sistemas e Full Stack Developer
+                {t("ROLE")}
               </h2>
               <p className="text-[#F0F8FF] font-[jura] font-semibold text-center md:text-left">
-                Java | Spring Boot | JavaScript | React | Tailwind{" "}
+                {t("TECH_STACK_TITLE")}
               </p>
             </header>
 

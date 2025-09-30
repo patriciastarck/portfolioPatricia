@@ -8,6 +8,7 @@ import SpringBoot_logo from "../assets/icons8-spring-boot-144.png";
 import JavaScript_logo from "../assets/icons8-javascript-144.png";
 import Postgres_logo from "../assets/icons8-postgres-144.png";
 import dig from "../assets/StockCake-Digital Consciousness Evolution_1756406659.jpg";
+import { useLanguage } from "../context/LanguageContext"; // Importe o hook
 
 const skillsData = [
   {
@@ -43,13 +44,13 @@ const skillsData = [
   {
     id: 6,
     image: Html,
-    // title: "HTML",
+    title: "HTML", // Adicionado título para consistência
     // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
   {
     id: 7,
     image: Css,
-    // title: "CSS",
+    title: "CSS", // Adicionado título para consistência
     // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
   {
@@ -75,7 +76,12 @@ const SkillBox = ({ image, title, description }) => (
   </div>
 );
 
-export default function skills() {
+export default function Skills() {
+  const { t } = useLanguage(); // Obtenha a função de tradução
+
+  // Como o tittle do skillBox é dinâmico, não precisamos traduzir aqui.
+  // O que precisamos traduzir é a manchete principal.
+
   return (
     <section
       id="habilidades"
@@ -96,8 +102,10 @@ export default function skills() {
         <header className="min-h-22 flex justify-start items-center">
           <div className="flex items-start justify-center gap-4 sm:gap-8">
             <h1 className="font-[jura] text-3xl sm:text-4xl font-extrabold text-center bg-black/70 tracking-wider">
-              Minhas{" "}
-              <span className="text-[#990dc7] font-extrabold">Habilidades</span>
+              {t("SKILLS_TITLE").split(" ")[0]}{" "}
+              <span className="text-[#990dc7] font-extrabold">
+                {t("SKILLS_TITLE").split(" ").slice(1).join(" ")}
+              </span>
             </h1>
           </div>
         </header>

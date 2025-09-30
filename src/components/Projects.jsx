@@ -4,8 +4,9 @@ import conversor from "../assets/conversor_img.png";
 import literalura from "../assets/literalura_img.png";
 import forum from "../assets/forumHub_img.png";
 import lp from "../assets/lp_saude_mental.png";
+import { useLanguage } from "../context/LanguageContext"; // Importe o hook
 
-const ProjectCard = ({ image, title, description, link }) => {
+const ProjectCard = ({ image, title, description, link, t }) => {
   return (
     // Substitua 'max-w-sm' por uma largura fixa como 'w-72'
     <article
@@ -27,7 +28,7 @@ const ProjectCard = ({ image, title, description, link }) => {
             className="absolute h-[202px] inset-0 flex items-center justify-center bg-opacity-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <button className="bg-blue-800 text-sm font-bold text-white py-2 px-4 rounded-3xl shadow hover:text-shadow-white hover:bg-[#2879d5] group-hover:opacity-90">
-              Live Preview
+              {t("PROJECT_LIVE_PREVIEW")}
             </button>
           </a>
         </figure>
@@ -45,55 +46,53 @@ const ProjectCard = ({ image, title, description, link }) => {
 };
 
 export default function Projects() {
+  const { t } = useLanguage(); // Obtenha a função de tradução
+
+  // Usando a função 't' para traduzir os títulos e descrições
   const listProjects = [
     {
       image: game,
-      title: "Jogo do número secreto - JavaScript",
-      description: "Redireciona ao Github do projeto",
+      title: t("PROJECT_TITLE_1"),
+      description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "https://jogo-henna-rho-92.vercel.app/",
     },
     {
       image: literalura,
-      title: "Projeto Literalura",
-      description: "Redireciona ao Github do projeto",
+      title: t("PROJECT_TITLE_2"),
+      description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "https://github.com/patriciastarck/literalura",
     },
     {
       image: conversor,
-      title: "Conversor de moeda - Java",
-      description: "Redireciona ao Github do projeto",
+      title: t("PROJECT_TITLE_3"),
+      description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "https://github.com/patriciastarck/conversor-de-moedas",
     },
     {
       image: forum,
-      title: "Forum Hub - Java Spring Boot",
-      description: "Redireciona ao Github do projeto",
+      title: t("PROJECT_TITLE_4"),
+      description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "https://github.com/patriciastarck/forumHub",
     },
     {
       image: lp,
-      title: "Portfolio Website3",
-      description: "Redireciona ao Github do projeto",
+      title: t("TITLE_PORTFOLIO") + " Website3", // Mantendo o título dinâmico com tradução
+      description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "file:///D:/lp-saude/lp.html",
     },
-    // {
-    //   image: teste,
-    //   title: "Portfolio Website4",
-    //   description: "Redireciona ao Github do projeto",
-    //   link: "",
-    // },
+    // Removido o item comentado, limpa o código.
   ];
+
+  const [title1, ...restOfTitle] = t("PROJECTS_TITLE").split(" ");
 
   return (
     <main className="p-4 h-sc font-[jura] bg-[linear-gradient(360deg,rgba(8,0,36,0.97)35%,rgba(9,9,121,1)99%)]">
       <section data-aos="fade-up" data-aos-delay="300">
         <header className="flex justify-center items-center h-20">
           <h1 className="h-10 text-3xl text-white sm:text-4xl font-bold">
-            Meus <span className="text-[#318cf5]">Projetos</span>
+            {title1}{" "}
+            <span className="text-[#318cf5]">{restOfTitle.join(" ")}</span>
           </h1>
-          {/* <p className='text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quasi veniam soluta illum.
-          </p> */}
         </header>
       </section>
 
@@ -109,6 +108,7 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             link={project.link}
+            t={t} // Passe a função 't' para o ProjectCard
           />
         ))}
       </section>
