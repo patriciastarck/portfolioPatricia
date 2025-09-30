@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
   // Chamada de Hooks dentro do componente funcional: CORRETO
   const [isOpen, setIsOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const { language, toggleLanguage, t } = useLanguage();
+  const { highContrast, setHighContrast } = useTheme(); // Usado o hook useTheme
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,6 +49,22 @@ export default function Navbar() {
           {t("TITLE_PORTFOLIO")}
         </h1>
         <div className="container mx-auto flex items-center justify-end">
+          {/* BOTÃO DE ALTO CONTRASTE ADICIONADO */}
+          <button
+            onClick={() => setHighContrast(!highContrast)}
+            className={`text-white text-sm font-bold border px-2 py-1 rounded-md mr-4 transition-colors duration-300 ${
+              highContrast
+                ? "bg-yellow-400 text-black border-yellow-400 hover:bg-yellow-200"
+                : "border-white hover:bg-white hover:text-gray-900"
+            }`}
+            aria-label={`Toggle High Contrast Mode. Current state: ${
+              highContrast ? "On" : "Off"
+            }`}
+          >
+            {highContrast ? "AC OFF" : "AC ON"}
+          </button>
+          {/* FIM BOTÃO ALTO CONTRASTE */}
+
           {/* O BOTÃO DE LINGUAGEM */}
           <button
             onClick={toggleLanguage}

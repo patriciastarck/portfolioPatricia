@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 /* @tailwind base;
@@ -6,9 +5,28 @@
 @tailwind utilities;
 
 :root {
-  --cor1: #3a86ff;
-  --cor2: #f5f5f5;
+  /* Cores base do tema */
+  --color-bg-primary: #080024; /* Base para o fundo do body/seções */
+  --color-bg-secondary: #090979; /* Cor de fundo alternativa */
+  --color-text-primary: #f0f8ff; /* Cor principal do texto (branco/quase branco) */
+  --color-text-accent: #3a86ff; /* Cor de destaque/links (azul) */
+  --color-accent-primary: #801b9c; /* Cor de destaque/hover (roxo) */
+
+  --cor1: var(--color-text-accent); /* Variável existente */
+  --cor2: var(--color-text-primary); /* Variável existente */
   --fonteCapa: "astronomous";
+}
+
+/* ALTO CONTRASTE: Redefine as variáveis com cores de alto contraste */
+.high-contrast {
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #111111;
+  --color-text-primary: #ffffff;
+  --color-text-accent: #ffff00; /* Amarelo brilhante para links/destaques */
+  --color-accent-primary: #00ff00; /* Verde brilhante para hover/destaques */
+
+  /* Força o fundo primário para o body */
+  background-color: var(--color-bg-primary) !important;
 }
 
 * {
@@ -19,8 +37,21 @@
 }
 
 body {
+  /* Aplicando a cor de fundo do tema */
+  background-color: var(--color-bg-primary);
   overflow-x: hidden;
 }
+
+/* REGRAS DE ANULAÇÃO DE FUNDO NO MODO HC:
+  Esta regra genérica aplica o fundo primário e remove qualquer imagem/gradiente de fundo 
+  em qualquer elemento que tenha uma classe de fundo (bg-*) dentro do modo high-contrast.
+  Isso garante que todos os fundos escuros customizados sejam substituídos.
+*/
+.high-contrast [class*="bg-"] {
+    background-color: var(--color-bg-primary) !important;
+    background-image: none !important;
+}
+
 
 .globo-img {
     width: 28vw;
@@ -39,14 +70,22 @@ body {
     
 }
 
+/* ALTO CONTRASTE: Mudar a cor da sombra do globo */
+.high-contrast .globo-img {
+    box-shadow: -25px -25px 20px black inset, 10px 30px 20px white inset, 0px 0px 20px var(--color-text-accent);
+}
+
 /* 2. Sombra menor para telas de até 767px (mobile) */
 @media (max-width: 767px) {
     .globo-img {
         /* Redefina os valores da sombra para um tamanho menor */
         box-shadow: -15px -15px 10px black inset, 5px 15px 10px white inset, 0px 0px 10px var(--cor1);
     }
-}
 
+    .high-contrast .globo-img {
+        box-shadow: -15px -15px 10px black inset, 5px 15px 10px white inset, 0px 0px 10px var(--color-text-accent);
+    }
+}
 
 
 /* Opcional: Animação */
@@ -55,9 +94,3 @@ body {
     background-position: 100%;
   }
 }
-
-
-
-
-
-

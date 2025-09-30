@@ -1,7 +1,9 @@
-// src/context/ThemeContext.jsx
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 
 export const ThemeContext = createContext();
+
+// Export nomeado para consumir o contexto
+export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }) {
   const [highContrast, setHighContrast] = useState(false);
