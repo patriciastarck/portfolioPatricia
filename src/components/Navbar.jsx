@@ -65,7 +65,6 @@ export default function Navbar() {
             {/* Exibe a abreviação do idioma oposto */}
             {language === "pt" ? "EN" : "PT"}
           </button>
-          {/* FIM DO BOTÃO */}
 
           {/* BOTÃO DE ALTO CONTRASTE */}
           <button
@@ -81,7 +80,7 @@ export default function Navbar() {
           >
             {highContrast ? "AC OFF" : "AC ON"}
           </button>
-          {/* FIM BOTÃO ALTO CONTRASTE */}
+
           <button
             onClick={() => updateFontSize("decrease")}
             className={`text-white text-md border border-white p-1 rounded-md transition-colors duration-300 ${
@@ -110,7 +109,6 @@ export default function Navbar() {
 
         <div className="container mx-auto flex items-center justify-center">
           {/* BOTÕES DE ZOOM DE TEXTO */}
-
           <button
             className="md:hidden focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -128,7 +126,6 @@ export default function Navbar() {
                 <a
                   key={link.id}
                   href={link.link}
-                  // Usa a variável CSS para o hover
                   className="hover:text-[var(--color-text-accent)] text-lg"
                 >
                   {link.name}
@@ -138,7 +135,6 @@ export default function Navbar() {
           </nav>
         </div>
         <div
-          // A classe 'bg-[linear-gradient(...)]' será sobrescrita pela regra genérica no index.css
           className={`${
             isOpen ? "block" : "hidden"
           } md:hidden bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-2.5 space-y-8 pt-16`}

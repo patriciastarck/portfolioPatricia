@@ -4,11 +4,10 @@ import conversor from "../assets/conversor_img.png";
 import literalura from "../assets/literalura_img.png";
 import forum from "../assets/forumHub_img.png";
 import lp from "../assets/lp_saude_mental.png";
-import { useLanguage } from "../context/LanguageContext"; // Importe o hook
+import { useLanguage } from "../context/LanguageContext";
 
 const ProjectCard = ({ image, title, description, link, t }) => {
   return (
-    // Substitua 'max-w-sm' por uma largura fixa como 'w-72'
     <article
       id="projects"
       className="relative w-62 shadow-sm shadow-[rgba(9,9,121,1)] bg-gray-800 rounded overflow-hidden group flex flex-col text-center"
@@ -46,9 +45,8 @@ const ProjectCard = ({ image, title, description, link, t }) => {
 };
 
 export default function Projects() {
-  const { t } = useLanguage(); // Obtenha a função de tradução
+  const { t } = useLanguage();
 
-  // Usando a função 't' para traduzir os títulos e descrições
   const listProjects = [
     {
       image: game,
@@ -76,11 +74,10 @@ export default function Projects() {
     },
     {
       image: lp,
-      title: t("TITLE_PORTFOLIO") + " Website3", // Mantendo o título dinâmico com tradução
+      title: t("TITLE_PORTFOLIO") + " Website3",
       description: t("PROJECT_DESCRIPTION_REDIRECT"),
       link: "file:///D:/lp-saude/lp.html",
     },
-    // Removido o item comentado, limpa o código.
   ];
 
   const [title1, ...restOfTitle] = t("PROJECTS_TITLE").split(" ");

@@ -1,9 +1,9 @@
 import React from "react";
 import finger from "../assets/StockCake-Future At Fingertips_1756229011.jpg";
-import { useLanguage } from "../context/LanguageContext"; // Importe o hook
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
-  const { t } = useLanguage(); // Obtenha a função de tradução
+  const { t } = useLanguage();
 
   return (
     <section

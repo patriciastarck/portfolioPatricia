@@ -51,7 +51,6 @@ const ProjectCarousel = () => {
   ];
 
   return (
-    // Contêiner principal com posicionamento relativo para os filhos.
     <div
       id="meus-projetos"
       className="relative min-h-screen flex flex-col items-center justify-evenly bg-[linear-gradient(360deg,rgba(8,0,36,0.97)35%,rgba(9,9,121,1)99%)]"

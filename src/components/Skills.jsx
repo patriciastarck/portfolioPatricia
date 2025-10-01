@@ -8,56 +8,48 @@ import SpringBoot_logo from "../assets/icons8-spring-boot-144.png";
 import JavaScript_logo from "../assets/icons8-javascript-144.png";
 import Postgres_logo from "../assets/icons8-postgres-144.png";
 import dig from "../assets/StockCake-Digital Consciousness Evolution_1756406659.jpg";
-import { useLanguage } from "../context/LanguageContext"; // Importe o hook
+import { useLanguage } from "../context/LanguageContext";
 
 const skillsData = [
   {
     id: 1,
     image: Java,
     title: "Java",
-    // description: "Lorem jjkifkkf ooofofofofo",
   },
   {
     id: 2,
     image: SpringBoot_logo,
     title: "Spring Boot",
-    // description: "Lorem jjkifkkf ooofofofofo",
   },
   {
     id: 3,
     image: Postgres_logo,
     title: "Postgresql",
-    // description: "Lorem jjkifkkf ooofofofofo ",
   },
   {
     id: 4,
     image: JavaScript_logo,
     title: "JavaScript",
-    // description: "Lorem jjkifkkf ",
   },
   {
     id: 5,
     image: React_logo,
     title: "React",
-    // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
   {
     id: 6,
     image: Html,
-    title: "HTML", // Adicionado título para consistência
-    // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
+    title: "HTML",
   },
   {
     id: 7,
     image: Css,
-    title: "CSS", // Adicionado título para consistência
-    // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
+    title: "CSS",
   },
   {
     id: 8,
     image: Tailwind_logo,
     title: "Tailwind CSS",
-    // description: "Lorem jjkifkkf ooofofofofo foofoofof 0ofofoofofof oofoofi",
   },
 ];
 
@@ -65,7 +57,6 @@ const SkillBox = ({ image, title, description }) => (
   <div className="flex justify-center">
     <article className="bg-[#000000] w-52 h-30 sm:p-6 hover:bg-[#990dc7] transition-all duration-300">
       <figure className="flex justify-center ">
-        {/* Corrigido 'flex-justify-cente' para 'flex justify-center' */}
         <img src={image} alt={title} className="w-16 h-16 sm:w-20 sm:h-20" />
       </figure>
       <header>
@@ -77,11 +68,7 @@ const SkillBox = ({ image, title, description }) => (
 );
 
 export default function Skills() {
-  const { t } = useLanguage(); // Obtenha a função de tradução
-
-  // Como o tittle do skillBox é dinâmico, não precisamos traduzir aqui.
-  // O que precisamos traduzir é a manchete principal.
-
+  const { t } = useLanguage();
   return (
     <section
       id="habilidades"
@@ -114,7 +101,6 @@ export default function Skills() {
           data-aos-delay="500"
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
         >
-          {/* Corrigido 'sm>:gap-6' para 'gap-6' */}
           {skillsData.map((skill) => (
             <SkillBox
               key={skill.id}

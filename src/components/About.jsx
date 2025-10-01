@@ -1,8 +1,8 @@
 import cyber from "../assets/StockCake-Cybersecurity Data Analysis_1755795948.jpg";
-import { useLanguage } from "../context/LanguageContext"; // Importe o hook
+import { useLanguage } from "../context/LanguageContext";
 
 export default function About() {
-  const { t } = useLanguage(); // Obtenha a função de tradução
+  const { t } = useLanguage();
 
   return (
     <section
@@ -50,13 +50,6 @@ export default function About() {
             >
               {t("ABOUT_DOWNLOAD_CV")}
             </a>
-
-            {/* <button
-              className="inline-flex text-white border-2 py-2 px-4 sm:px-6 focus:outline-none w-30
-                    hover:bg-[#990dc7] hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-sm:text-lg"
-            >
-              currículo
-            </button> */}
           </footer>
         </article>
       </div>
