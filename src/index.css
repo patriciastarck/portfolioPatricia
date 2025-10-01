@@ -15,6 +15,15 @@
   --cor1: var(--color-text-accent); /* Variável existente */
   --cor2: var(--color-text-primary); /* Variável existente */
   --fonteCapa: "astronomous";
+  
+  /* NOVO: Variável para escala de fonte (controlada pelo JS) */
+  --font-size-scale: 1.0; 
+}
+
+/* NOVO: Aplica a escala de fonte à base do documento. 
+   Isso fará o scale em todo o texto que usa classes de tamanho do Tailwind. */
+html {
+    font-size: calc(100% * var(--font-size-scale));
 }
 
 /* ALTO CONTRASTE: Redefine as variáveis com cores de alto contraste */
@@ -45,7 +54,6 @@ body {
 /* REGRAS DE ANULAÇÃO DE FUNDO NO MODO HC:
   Esta regra genérica aplica o fundo primário e remove qualquer imagem/gradiente de fundo 
   em qualquer elemento que tenha uma classe de fundo (bg-*) dentro do modo high-contrast.
-  Isso garante que todos os fundos escuros customizados sejam substituídos.
 */
 .high-contrast [class*="bg-"] {
     background-color: var(--color-bg-primary) !important;

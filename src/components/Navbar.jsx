@@ -4,11 +4,12 @@ import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
-  // Chamada de Hooks dentro do componente funcional: CORRETO
   const [isOpen, setIsOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
   const { language, toggleLanguage, t } = useLanguage();
-  const { highContrast, setHighContrast } = useTheme(); // Usado o hook useTheme
+  // Incluindo a nova funcionalidade de fonte
+  const { highContrast, setHighContrast, fontSizeScale, updateFontSize } =
+    useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,32 +40,20 @@ export default function Navbar() {
     { id: 5, name: t("NAV_CONTACT"), link: "#contato" },
   ];
 
+  // Definições de escala de fonte (0.9 a 1.3)
+  const isMinScale = fontSizeScale <= 0.9;
+  const isMaxScale = fontSizeScale >= 1.3;
+
   return (
     <div className="w-screen flex items-center justify-center">
       <header
-        className="z-20 flex h-20 w-11/12 items-center justify-center "
+        className="z-20 flex h-20 w-11/12 items-center"
         data-aos-delay="300"
       >
-        <h1 className="text-4xl font-[jura] font-bold italic text-white mr-3.5vvg">
+        <h1 className="w-60 text-4xl font-[jura] font-bold italic text-white mr-3.5vvg">
           {t("TITLE_PORTFOLIO")}
         </h1>
-        <div className="container mx-auto flex items-center justify-end">
-          {/* BOTÃO DE ALTO CONTRASTE ADICIONADO */}
-          <button
-            onClick={() => setHighContrast(!highContrast)}
-            className={`text-white text-sm font-bold border px-2 py-1 rounded-md mr-4 transition-colors duration-300 ${
-              highContrast
-                ? "bg-yellow-400 text-black border-yellow-400 hover:bg-yellow-200"
-                : "border-white hover:bg-white hover:text-gray-900"
-            }`}
-            aria-label={`Toggle High Contrast Mode. Current state: ${
-              highContrast ? "On" : "Off"
-            }`}
-          >
-            {highContrast ? "AC OFF" : "AC ON"}
-          </button>
-          {/* FIM BOTÃO ALTO CONTRASTE */}
-
+        <div className="w-full flex items-center justify-end gap-1.5 space-x-2 mr-4">
           {/* O BOTÃO DE LINGUAGEM */}
           <button
             onClick={toggleLanguage}
@@ -77,6 +66,50 @@ export default function Navbar() {
             {language === "pt" ? "EN" : "PT"}
           </button>
           {/* FIM DO BOTÃO */}
+
+          {/* BOTÃO DE ALTO CONTRASTE */}
+          <button
+            onClick={() => setHighContrast(!highContrast)}
+            className={`bg-blue-600 text-white text-sm font-bold border px-2 py-1 rounded-md mr-4 transition-colors duration-300 ${
+              highContrast
+                ? "bg-yellow-400 text-black border-yellow-400 hover:bg-yellow-200"
+                : "border-white hover:bg-white hover:text-gray-900"
+            }`}
+            aria-label={`Toggle High Contrast Mode. Current state: ${
+              highContrast ? "On" : "Off"
+            }`}
+          >
+            {highContrast ? "AC OFF" : "AC ON"}
+          </button>
+          {/* FIM BOTÃO ALTO CONTRASTE */}
+          <button
+            onClick={() => updateFontSize("decrease")}
+            className={`text-white text-md border border-white p-1 rounded-md transition-colors duration-300 ${
+              isMinScale
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-white hover:text-gray-900"
+            }`}
+            aria-label="Diminuir o tamanho da fonte"
+            disabled={isMinScale}
+          >
+            A-
+          </button>
+          <button
+            onClick={() => updateFontSize("increase")}
+            className={`text-white text-md border border-white p-1 rounded-md transition-colors duration-300 ${
+              isMaxScale
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-white hover:text-gray-900"
+            }`}
+            aria-label="Aumentar o tamanho da fonte"
+            disabled={isMaxScale}
+          >
+            A+
+          </button>
+        </div>
+
+        <div className="container mx-auto flex items-center justify-center">
+          {/* BOTÕES DE ZOOM DE TEXTO */}
 
           <button
             className="md:hidden focus:outline-none"
@@ -95,7 +128,8 @@ export default function Navbar() {
                 <a
                   key={link.id}
                   href={link.link}
-                  className="hover:text-blue-400 text-lg"
+                  // Usa a variável CSS para o hover
+                  className="hover:text-[var(--color-text-accent)] text-lg"
                 >
                   {link.name}
                 </a>
@@ -104,6 +138,7 @@ export default function Navbar() {
           </nav>
         </div>
         <div
+          // A classe 'bg-[linear-gradient(...)]' será sobrescrita pela regra genérica no index.css
           className={`${
             isOpen ? "block" : "hidden"
           } md:hidden bg-[linear-gradient(1deg,rgba(2,0,36,0.97)_35%,rgba(9,9,121,1)_99%)] absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-2.5 space-y-8 pt-16`}
@@ -118,7 +153,8 @@ export default function Navbar() {
             <a
               key={link.id}
               href={link.link}
-              className="text-lg text-white hover:text-blue-400"
+              // Usa a variável CSS para o hover
+              className="text-lg text-white hover:text-[var(--color-text-accent)]"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
