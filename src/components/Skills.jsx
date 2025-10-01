@@ -7,6 +7,8 @@ import Tailwind_logo from "../assets/tailwind.png";
 import SpringBoot_logo from "../assets/icons8-spring-boot-144.png";
 import JavaScript_logo from "../assets/icons8-javascript-144.png";
 import Postgres_logo from "../assets/icons8-postgres-144.png";
+import Node_logo from "../assets/nodejs.png";
+import Next_logo from "../assets/Nextjs.png";
 import dig from "../assets/StockCake-Digital Consciousness Evolution_1756406659.jpg";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -50,6 +52,16 @@ const skillsData = [
     id: 8,
     image: Tailwind_logo,
     title: "Tailwind CSS",
+  },
+  {
+    id: 9,
+    image: Node_logo,
+    title: "Node JS",
+  },
+  {
+    id: 10,
+    image: Next_logo,
+    title: "Next JS",
   },
 ];
 
